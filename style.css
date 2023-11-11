@@ -41,6 +41,11 @@ body {
     pointer-events: none;
 }
 
+.buttons button:hover {
+    background-color: hsl(270, 93%, 24%);
+    color: white;
+}
+
 .buttons button {
     padding: 10px;
     border-radius: 6px;
