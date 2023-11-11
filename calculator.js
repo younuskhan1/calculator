@@ -19,7 +19,7 @@ const calculate = (btnValue) => {
     } else if (btnValue === "DEL") {
         // if DEL button is clicked, the last characters will be deleted from the output.  
         // output = output.toString().slice(0, -1); same as exactly
-        output = output.toString().slice(0, output.length - 1);
+        output = output.toString().slice(0, - 1);
         // if output is empty and button is special characters then return 
     } else if (output === "" && specialChars.includes(btnValue)) {
         return;
@@ -28,7 +28,7 @@ const calculate = (btnValue) => {
         // otherwise btnvalue will be added to the output value. 
         output += btnValue;
     }
-    // this line will be executed at last after reviewing above conditions. 
+    // this line will be executed at last after reviewing above conditions and getting the value of output
     display.value = output;
 }
 
