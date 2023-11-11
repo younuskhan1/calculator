@@ -15,12 +15,13 @@ const calculate = (btnValue) => {
     } else if (btnValue === "DEL") {
         // if DEL button is clicked, the last characters will be deleted from the output.  
         output = output.toString().slice(0, -1);
+        // if output is empty and button is special characters then return 
+    } else if (output === "" && specialchars.includes(btnValue)) {
+        return;
+
     } else {
-        // if output is empty and button is special characters then return  
-        if (output === "" && specialchars.includes(btnValue)) return;
         output += btnValue;
     }
-
     display.value = output;
 }
 buttons.forEach((button) => {
