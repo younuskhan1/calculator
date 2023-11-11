@@ -14,7 +14,8 @@ const calculate = (btnValue) => {
         output = "";
     } else if (btnValue === "DEL") {
         // if DEL button is clicked, the last characters will be deleted from the output.  
-        output = output.toString().slice(0, -1);
+        // output = output.toString().slice(0, -1); same as exactly
+        output = output.toString().slice(0, output.length - 1);
         // if output is empty and button is special characters then return 
     } else if (output === "" && specialchars.includes(btnValue)) {
         return;
